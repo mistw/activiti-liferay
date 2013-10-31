@@ -82,4 +82,6 @@
 		<name>EmDev Limited</name>
 		<url>http://www.emdev.ru</url>
 	</organization>
+	<groupId>net.emforge</groupId>
+	<version>1.0</version>
 </project>
