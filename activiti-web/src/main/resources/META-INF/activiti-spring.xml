@@ -47,6 +47,7 @@
 			</list>
 		</property>
 		<property name="bpmnParseFactory" ref="customBpmnParseFactory" />
+		<property name="activityFontName" value="宋体"></property>
 	</bean>
 	
 	<bean id="customServiceTaskParseHandler" class="org.activiti.engine.impl.bpmn.parser.handler.CustomServiceTaskParseHandler">
