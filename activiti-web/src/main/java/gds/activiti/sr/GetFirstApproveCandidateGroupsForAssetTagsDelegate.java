@@ -9,12 +9,12 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
 import net.emforge.activiti.content.LiferayAssetsUtil;
 import net.emforge.activiti.identity.LiferayGroupsUtil;
 
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
+import org.apache.commons.lang.StringUtils;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -51,7 +51,7 @@ public class GetFirstApproveCandidateGroupsForAssetTagsDelegate implements JavaD
 
 		// 设置流程变量，流程中的UserTask中使用该流程变量来安排审核人
 		_log.info("-----"+StringUtils.join(cadidateGroupsForTags,","));
-		execution.setVariable("firstCandidateGroupList",StringUtils.join(cadidateGroupsForTags,","));
+		execution.setVariable("firstCandidateGroupList",cadidateGroupsForTags);
 	}
 	
 	private Collection<String> getCadidateGroupsForTags(DelegateExecution execution, Collection<String> assetTags) throws Exception {
